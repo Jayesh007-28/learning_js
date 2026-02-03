@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var a = {
+            fname : 'Jayesh',
+            lname : 'Jadhav',
+            age : 23,
+            email : 'jayeshjadhav@gmail.com',
+            players : ['sachin','yuvraj','dhoni','rahul'],
+            adrress:{
+                city : 'Jalgaon',
+                country : 'India',
+                state : 'Maharastra'
+            },
+            phone : 1234567890,
+            message : "Today Match IND vs NZ 2026"
+        };
+
+        document.write("My name is " + a.fname + "<br>" + "My surname is " + a.lname + "<br>");
+        document.write("My email is " + a.email + "<br>" + "my age is " + a.age + "<br>");
+        document.write("my fav player is " + a.players[2] + "<br>");
+        document.write("my fav player is " + a.players[0] + "<br>");
+        document.write("my fav player is " + a.players[3] + "<br>");
+        document.write("my fav player is " + a.players[1] + "<br>");
+        document.write("My city is " + a.adrress.city + "<br>" + "My state is " + a.adrress.state + "<br>" + "my country is " + a.adrress.country + "<br>");
+        document.write("my number is " + a.phone + "<br>" + "message is " + a.message + "<br>");
+    </script>
+</body>
+</html>

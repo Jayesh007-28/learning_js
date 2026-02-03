@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table ,th ,td,tr{
+            border: 2px solid black;
+            text-align: center;
+        }
+        th{
+            background-color: yellow;
+        }
+        tr{
+            background-color: bisque;
+        }
+        table{
+            width: 350px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var  employee = [{name:'Jayesh',age:22,address:"Jalgaon"},
+                        {name:'Mahesh',age:23,address:"mumbai"},
+                        {name:'Yogeshwar',age:24,address:"dule"},
+                        {name:'Vaibhav',age:25,address:"pune"},
+                        {name:'Sagar',age:26,address:"nashik"},
+                        {name:'Virat',age:27,address:"bhusaval"},
+                        {name:'Dhoni',age:28,address:"malkapur"},
+                        {name:'Rohit',age:29,address:"pimpri"},
+                        ];
+
+                        document.write("<h2>Emplyoee Details</h2>");
+                        document.write("<table>");
+                        document.write("<tr>");
+                        document.write("<th>Name</th>");
+                        document.write("<th>age</th>");
+                        document.write("<th>address</th>");
+                        document.write("</tr>");
+
+                        for(let i=0;i<employee.length;i++){
+                            document.write("<tr>");
+                                document.write("<td>" + employee[i].name + "</td>");
+                                document.write("<td>" + employee[i].age + "</td>");
+                                document.write("<td>" + employee[i].address + "</td>");
+
+                            document.write("</tr>");
+                        }
+                        document.write("</table>");
+
+
+    </script>
+</body>
+</html>
