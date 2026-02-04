@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <!-- Example1 -->
+    <h1>Change text using DOM</h1>
+
+    <h2 id="title">Old Heading</h2>
+
+    <button onclick="changeText()">Click here to change title</button>
+
+    <!-- Example2 -->
+    <h1>Change Style color using DOM</h1>
+
+    <h2 id="message">Hello its Jayesh</h2>
+
+    <button onclick="changeColor()">Click here to change color</button>
+
+    <!-- Example3 -->
+    <h1>Change image Using Dom</h1>
+
+    <img src="images/Lion.jpg" id="myimg" width="400px" />
+
+    <button onclick="chnageimg()">Click here to change image</button>
+
+    <!-- Example4 -->
+    <h1>Input from user</h1>
+
+    <input type="text" id="nameinput" placeholder="Enter Name" />
+
+    <button onclick="showname()">Submit</button>
+
+    <h1 id="output"></h1>
+
+    <!-- Example5 -->
+
+    <h1>Delete Line</h1>
+    <p id="deleteMe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, esse aspernatur odit porro
+        debitis dolore sequi error delectus molestiae quibusdam labore velit inventore nihil placeat, rerum culpa? Esse,
+        molestias modi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita minus provident similique
+        incidunt illum, odit asperiores sint cupiditate error cum iste doloribus eligendi ex fuga aliquid assumenda quae
+        saepe pariatur!</p>
+    <button onclick="removepara()">Delete</button>
+
+    <!-- Example6 -->
+    <p id="para1">Change My font Size</p>
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+
+    <button onclick="toggleTheme()">ToggleTheme</button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dolorem eligendi quam vitae expedita error omnis enim corrupti voluptatum hic minus officiis magnam, maxime debitis odio nesciunt ab suscipit molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor nemo aut, omnis officiis dolorum quas sapiente voluptatibus in non aperiam, officia praesentium aliquam nostrum molestiae reprehenderit doloremque? Natus, autem?</p>
+
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script>
+        const toggleTheme = () => document.body.classList.toggle("dark-mode");
+    </script>
+
+    <script>
+        //ex6
+        let size = 16;
+
+        function increase() {
+            size++;
+            document.getElementById('para1').style.fontSize = size +'px';
+        }
+
+        function decrease() {
+            size--;
+            document.getElementById('para1').style.fontSize = size +'px';
+        }
+
+    </script>
+
+    <script>
+        //ex5
+        function removepara() {
+            document.getElementById('deleteMe').remove();
+        }
+    </script>
+
+    <script>
+        //ex4
+        function showname() {
+            let name = document.getElementById('nameinput').value;
+
+            document.getElementById('output').innerHTML = 'Hello Welcome ' + name;
+        }
+    </script>
+
+    <script>
+        //ex3
+        function chnageimg() {
+            document.getElementById('myimg').src = "images/Tricolor.jpg";
+        }
+    </script>
+
+    <script>
+        //ex2
+        function changeColor() {
+            document.getElementById('message').style.color = 'red';
+        }
+    </script>
+
+    <script>
+        //ex1
+        function changeText() {
+            document.getElementById('title').innerHTML = "New Heading";
+        }
+    </script>
+</body>
+
+</html>
